@@ -1,5 +1,6 @@
 package com.kh.day03.array.exercise;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Exercise_Array1 {
@@ -138,12 +139,104 @@ public class Exercise_Array1 {
 	
 //---------------------------------------------------------------------------------------	
 	
+//	어려움.
 	
 	public void lottoExercise() {
 		
 //		로또 번호 자동 생성기 프로그램, 중복 없이 추출하기
 //		단, 결과는 오름차순으로 정렬
 //		로또 번호는 6개. 로또 번호의 범위는 1 ~ 45
+		
+
+		
+		int [] lottoNums = new int[6];
+		Random rand = new Random();
+//		temp는 if문 안에 왼쪽에 있는 값이 지워지기 전에 킵해놓음
+		int temp = 0; 
+		
+		
+
+		
+		
+	
+		
+		
+	
+		
+//		1~44까지 랜덤한 수가 lottoNums[0]에 들어감
+		lottoNums[0] = rand.nextInt(45)+1;
+		lottoNums[1] = rand.nextInt(45)+1;
+		lottoNums[2] = rand.nextInt(45)+1;
+		lottoNums[3] = rand.nextInt(45)+1;
+		lottoNums[4] = rand.nextInt(45)+1;
+		lottoNums[5] = rand.nextInt(45)+1;
+		
+	
+		
+//		중복없이 1 ~ 45 사이의 랜덤한 수를 6개 뽑는것. 밑에 주석에서 for문 확인
+		for(int i = 0; i < 6; i++) {
+			lottoNums[i] = rand.nextInt(45)+1;
+			
+			for(int e = 0; e < i; e++) {
+				if(lottoNums[i] == lottoNums[e]) {
+					//값이 중복되면 다시 뽑아야함
+					i--;
+					break;
+				}
+			}
+			
+		}
+			
+		
+		
+			
+////			----------------------------------
+//			if(lottoNums[1] == lottoNums[0]) {
+//				//값이 중복되면 다시 뽑아야함
+//			}
+////			----------------------------------1번째
+//			if(lottoNums[2] == lottoNums[1]) {
+//				
+//			}
+//			if(lottoNums[2] == lottoNums[0]) {
+//							
+//			}
+////			----------------------------------2번째
+//			if(lottoNums[3] == lottoNums[2]) {
+//				
+//			}
+//			if(lottoNums[3] == lottoNums[1]) {
+//							
+//			}
+//			if(lottoNums[3] == lottoNums[0]) {
+//				
+//			}
+////			----------------------------------3번째
+////			계속 이어짐..
+			
+			
+		
+//		버블정렬을 이용하여 오름차순 만들기!
+//		버블정렬은 for의 변수가 증가하기만 하면 됨 그래서 쉬움!
+//		단, 안에 있는 for문의 조건식의 최대값은 감소(-i)해야함!
+		for(int i = 0; i < lottoNums.length-1; i++) {
+			for(int j = 0; j < (lottoNums.length-1)-i; j++) {
+				
+				if(lottoNums[j] > lottoNums[j+1]) {
+					temp = lottoNums[j];
+					lottoNums[j] = lottoNums[j+1];
+					lottoNums[j+1] = temp;
+				}
+			}
+		}
+		
+		
+		
+		
+//		출력
+		for(int k=0; k<lottoNums.length; k++) {
+			System.out.print(lottoNums[k] +" ");
+		}
 		
 		
 	}

@@ -14,7 +14,10 @@ public class Run {
 //		dimArr.exercise5();
 		
 		Exercise_Exception excp = new Exercise_Exception();
-		excp.exercise1();
+//		excp.exercise1();
+//		excp.exercise2();
+//		excp.exercise3();
+//		excp.exercise4();
 	}
 
 }

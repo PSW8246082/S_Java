@@ -22,7 +22,8 @@ public class Run {
 //		실행하는 법
 //		exArr.exercise1();
 //		exArr.exercise2();	
-		exArr.arryCopyExercise();
+//		exArr.arryCopyExercise();
+		exArr.lottoExercise();
 		
 		
 		
@@ -41,6 +42,7 @@ public class Run {
 //		실행하는 법
 //		exWhile.whileExercise1();
 //		exWhile.whileExercise2();
+		
 		
 		
 	
