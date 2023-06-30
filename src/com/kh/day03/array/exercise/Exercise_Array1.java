@@ -163,7 +163,7 @@ public class Exercise_Array1 {
 		
 	
 		
-//		1~44까지 랜덤한 수가 lottoNums[0]에 들어감
+//		1~45까지 랜덤한 수가 lottoNums[0]에 들어감
 		lottoNums[0] = rand.nextInt(45)+1;
 		lottoNums[1] = rand.nextInt(45)+1;
 		lottoNums[2] = rand.nextInt(45)+1;
