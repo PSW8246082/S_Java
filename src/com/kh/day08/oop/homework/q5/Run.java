@@ -8,10 +8,17 @@ public class Run {
 		kim.buyCoffee(new StarCafe(), 5500);
 		kim.printInfo();
 		
+		System.out.println();
+		
 		Person lee = new Person("이씨", 20000);
 		lee.buyCoffee(new CongCafe(), 4500);
 		lee.printInfo();
+		
+		System.out.println();
 
+		Person jang = new Person("장씨", 50000);
+		jang.buyCoffee(new StarCafe(), 6000);
+		jang.printInfo();
 	}
 
 }
